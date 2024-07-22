@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou não?</title>
+</head>
+<body>
+    <h1>Sistema de verificação de naturalidade</h1>
+    Em qual país você mora? <input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id = "res"></div>
+<script>
+    
+        function verificar()
+        {
+            
+           var país = document.querySelector("input#txtpaís").value
+           var res = document.getElementById("res")
+           res.innerHTML = "<p>Verificando...</p>"
+
+           if (país.toLowerCase() === "brasil")
+           {
+             res.innerHTML +="<p>Você é Brasileiro</p>"
+           }
+           else
+           {
+             res.innerHTML += "Você é estrangeiro!"
+           }
+        }
+</script>
+</body>
+</html>
